@@ -1,0 +1,69 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #7159c1;
+}
+
+.container{
+  /* inicia o grid */
+  display:grid;
+  /* fatia as colunas em flex*/
+  grid-template-columns: 3fr 1fr;
+  /* fatia as linhas  */
+  grid-template-rows: 20vh 70vh 10vh; 
+
+  /* espaço de 20px nos elementos 
+    grid-gap: 20px; 
+    shortcut para: 
+    grid-row-gap: 20px;
+    grid-column-gap: 5px;*/
+  
+  grid-template-areas: "h ."
+                        "m a"
+                        "f f" 
+  /* "f ."  adicionar . para ocupar 1 coluna apenas */
+}
+
+header{
+  background: yellow;
+  /* já que o container foi dividido em 2 colunas
+    pensando em "linhas virtuais" que separam as colunas
+    temos:
+    |     COLUNA 1         |  COLUNA 2 |
+    settamos o header para ir da l1 até l3:
+    l1                                l3
+    ou seja vai ficar ocupando a largura toda
+
+  grid-column:1/3
+
+  shortcut para:
+  grid-column-start:1;
+  grid-column-end:3; 
+  
+  grid-row:3/4;
+*/
+  grid-area: h;
+}
+
+main{
+  background: blue;
+
+  /* grid-column-start: 1;
+  grid-column-end: 2; */
+  grid-area: m;
+}
+
+aside{
+  background: green;
+  grid-area: a;
+  /* grid-column-start: 2;
+  grid-column-end: 3; */
+}
+
+footer{
+  background: red;
+  grid-area: f;
+  /* grid-column-start:1;
+  grid-column-end:3; */
+}
