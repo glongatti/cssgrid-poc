@@ -63,3 +63,33 @@ O **eixo y** é o posicionamento vertical, de cima para baixo
 ## CONTENT, ITEMS e SELF
 
 ### CONTENT
+`justify-content` e `align-content` nos permite alinhar o próprio grid, relativo ao espaço fora do grid.
+
+O uso dessas propriedades são raras, pois só é aplicado caso o grid seja menor que a area definida. (Por exemplo, quando usamos em px o tamanho do grid, poderemos terminar com um grid pequeno, para o tamanho da area do grid)
+
+
+Podemos usar **7 valores**:
+1. start
+2. end
+3. center
+4. stretch
+5. space-between
+6. space-around
+7. space-evenly
+
+### Items
+
+`justify-items` e `align-items` vai permitir alinhar os items do nosso grid, em qualquer espaço disponível, na célula que ele habitar.
+
+Podemos usar **4 valores**:
+1. start
+2. end
+3. center
+4. stretch
+
+### Self
+
+`justify-self` e `align-self` vai nos permitir alinhar o item em si.
+
+
+Faz a mesma coisa que o `justify-items` e `align-items`, porém, aplicado diretamente no item de um grid
